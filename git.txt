@@ -1,0 +1,48 @@
+     验证GIT
+(base) raven@RavenBelldeMacBook-Pro ~ % git --version
+which git
+xcode-select -p
+git config --global --list
+git version 2.54.0 (Apple Git-157)
+/usr/bin/git
+/Applications/Xcode.app/Contents/Developer
+fatal: unable to read config file '/Users/raven/.gitconfig': No such file or directory//我也不知这是个啥
+(base) raven@RavenBelldeMacBook-Pro ~ % 
+
+
+    GitGUI:Git提供的图形界面工具
+    Git Bash:Git提供的命令行工具
+这两行是 Windows 版 Git 的说明，你在 Mac 上找不到它们。原因如下：
+
+Git GUI / Git Bash 都不是 Git 本身的组件，而是「Git for Windows」安装包额外附带的工具
+Git Bash 的实现方式是 MSYS2 模拟的 bash 环境，只有 Windows 才有
+Git GUI 是 Tcl/Tk 写的图形前端，理论上跨平台，但苹果自带的 Git 没有打包它
+你在 macOS 上用的是 Apple Git（/usr/bin/git，2.54.0），它只提供命令行，右键菜单里不会有「Git Bash Here」「Git GUI Here」
+
+对应关系
+教程里（Windows）｜｜你机器上的等价物
+Git Bash（命令行工具）｜｜	终端.app（你默认是 zsh，/bin/zsh）。Mac 终端本身就是完整的 Unix 环境，bash、git 和常见 Linux 命令都在，不需要额外安装一个 Git Bash
+Git GUI（图形界面工具）｜｜	已经装了 VS Code：按 Cmd+Shift+G 打开「源代码管理」。或者装 Sourcetree / Fork / Tower / GitHub Desktop
+右键 Git Bash Here（在文件夹里开终端）｜｜	Finder 里选中文件夹 → 右键「服务 → 新建位于文件夹位置的终端窗口」；或把文件夹直接拖到终端图标上；或 VS Code 里右键「在终端中打开」
+
+git config - global user.name "raven"
+
+git config -global user.email "353088389@qq.com"
+
+
+git commit -m "add file01"
+
+git log --pretty=oneline --abbrev-commit
+
+git log --pretty=oneline --abbrev-commit --all
+
+git log --pretty=oneline --abbrev-commit --all --graph
+
+git log --pretty=oneline --abbrev-commit --all --graph --decorate
+    git-log
+git reset --hard
+
+
+
+
+
